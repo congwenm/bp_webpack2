@@ -63,13 +63,14 @@ module.exports = {
       },
       //Then when your Javascript calls for an import on a .scss or .sass file, Webpack will do its thing.
 
-      {
-        test: /\.css$/,
-        use: [
-          ExtractTextPlugin.extract('css'),
-          'css-loader'
-        ]
-      }
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     ExtractTextPlugin.extract('css'),
+      //     'css-loader'
+      //
+      //   ]
+      // }
       // separate bundle for css
     ],
   },

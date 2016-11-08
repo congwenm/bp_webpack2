@@ -10516,14 +10516,15 @@ var _moment = __webpack_require__(0);
 
 var _moment2 = _interopRequireDefault(_moment);
 
-__webpack_require__(113);
+var _style = __webpack_require__(113);
+
+var _style2 = _interopRequireDefault(_style);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// @import "~normalize.css"; // dont work
-
 var rightNow = (0, _moment2.default)().format('MMMM do YYYY, h:mm:ss a');
 // import styles from './assets/stylesheets/application.css';
+// import "normalize.css"; // work due to resolve
 
 
 console.log(rightNow);
@@ -10592,7 +10593,7 @@ exports = module.exports = __webpack_require__(1)();
 exports.i(__webpack_require__(109), "");
 
 // module
-exports.push([module.i, "\n", ""]);
+exports.push([module.i, "/* you can actually drop the `~` when importing node modules with css modules enabled? but there might be build error when you @import your own css, resolve will take care of that in the `webpack.config.js` */\n\nbody {\n  background: gray;\n  position: absolute;\n  height:50%;\n  width: 50%;\n}\n", ""]);
 
 // exports
 
