@@ -1,6 +1,6 @@
 webpackJsonp([1,2],{
 
-/***/ 114:
+/***/ 112:
 /***/ function(module, exports) {
 
 "use strict";
@@ -10,4 +10,4 @@ console.log('this is home.js');
 
 /***/ }
 
-},[114]);
+},[112]);

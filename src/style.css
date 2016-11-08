@@ -1,4 +1,4 @@
-@import "normalize.css";
+@import "~normalize.css";
 /* you can actually drop the `~` when importing node modules with css modules enabled? but there might be build error when you @import your own css, resolve will take care of that in the `webpack.config.js` */
 
 body {

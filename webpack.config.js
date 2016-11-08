@@ -51,13 +51,13 @@ module.exports = {
       // Loaders for other file types can go here
 
       // css will magically scope to javascript file that loaded it. see https://github.com/css-modules/css-modules
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          { loader: 'css-loader', options: { modules: true } }
-        ]
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'style-loader',
+      //     { loader: 'css-loader', options: { modules: true } }
+      //   ]
+      // },
 
 
       //Then when your Javascript calls for an import on a .scss or .sass file, Webpack will do its thing.
@@ -68,16 +68,15 @@ module.exports = {
         ]
       },
 
+      // separate bundle for css, use <link> tag in index.html
+      {
+        test: /\.css$/,
+        use: [
+          ExtractTextPlugin.extract('css'),
+          'css-loader'
 
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     ExtractTextPlugin.extract('css'),
-      //     'css-loader'
-      //
-      //   ]
-      // }
-      // separate bundle for css
+        ]
+      }
     ],
   },
 
